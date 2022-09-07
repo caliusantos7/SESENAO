@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 5</title>
+</head>
+<body>
+    Digite a primeira nota<input id="ipt_primeiranota" > <br>
+    Digite a segunda nota<input id="ipt_segundanota" > <br>
+    Digite a terceira nota<input id="ipt_terceiranota" > <br>
+    <button onclick="Classificar()">Classificar aluno</button>
+    <div id="div_mens"> </div>
+</body>
+</html>
+
+<script>
+    
+    function Classificar() {
+         
+        var notaum = Number(ipt_primeiranota.value) 
+        var notadois = Number(ipt_segundanota.value) 
+        var notatres = Number(ipt_terceiranota.value) 
+        var media = (Number(notaum) + Number(notadois) + Number(notatres)) / 3
+
+        if (media > 9.5) {
+            div_mens.innerHTML = `Aluno fora da curva `;
+        
+        }else if (media > 7) {
+            div_mens.innerHTML = `Aluno acima da média`; 
+        } else if (media > 5) {
+            div_mens.innerHTML = `Aluno na média `;
+        }
+        else {
+            div_mens.innerHTML =`Aluno precisa de muita ajuda`;
+        }
+    }
+</script>

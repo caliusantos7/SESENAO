@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<body>
+    Sua renda famíliar? <input id="ipt_dinheiro" type="text">
+    <button onclick="AnalisarRenda()">Analisar Renda</button>
+    <div id="div_mens"></div>
+</body>
+</html>
+
+<script>
+    function AnalisarRenda() {
+        var renda_familiar = Number(ipt_dinheiro.value)
+       
+
+        if (renda_familiar < 250) {
+            div_mens.innerHTML = `<br>Classe E ${renda_familiar} `
+        }
+        if (renda_familiar < 900 ) {
+            div_mens.innerHTML = `<br>Classe D ${renda_familiar}`
+        }
+        if (renda_familiar< 2500) {
+            div_mens.innerHTML = `<br>Classe C ${renda_familiar}`
+        }
+        if (renda_familiar < 9500) {
+            div_mens.innerHTML = `<br>Classe B ${renda_familiar}`
+        }
+        if (renda_familiar > 9500) {
+            div_mens.innerHTML = `<br>Classe A ${renda_familiar}`
+        }
+    }
+</script>
+
+

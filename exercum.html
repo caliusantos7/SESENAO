@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+</head>
+<body>
+    Solicite sua altura: <input id="ipt_altura" type="text">
+    <button onclick="Analisar()">Analisar</button>
+    <div id="div_mens"> </div>
+</body>
+</html>
+
+<script>
+    function Analisar() {
+        var analise = Number(ipt_altura.value) 
+        if (analise < 1.65) {
+        div_mens.innerHTML =`<br>Você pode ser piloto de corrida (sua altura é ${analise})`
+        }    
+        if (analise >= 1.65) {
+            div_mens.innerHTML += `<br>Você pode ser jogador de futebol (sua altura é ${analise}) ` 
+        }
+        if (analise > 1.80) {
+            div_mens.innerHTML += `<br>Você pode ser jogador de volêi  (sua altura é ${analise})`
+        }
+    }
+</script>
